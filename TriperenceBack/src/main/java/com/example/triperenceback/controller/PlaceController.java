@@ -17,18 +17,19 @@ public class PlaceController {
     @Autowired
     private PlaceService placeService;
 
-    @GetMapping("/all")
+    @GetMapping("")
     public List<Place> place(){
         return placeService.getPlace();
     }
 
-//    @GetMapping("/likes")
-//    public String favorites() {
-//        return "즐겨찾기";
-//    }
-//
-//    @GetMapping("/place/{contentid}")
-//    public String detailInfo() {
-//        return "상세정보";
-//    }
+
+    @GetMapping("/likes")
+    public String favorites() {
+        return "즐겨찾기";
+    }
+
+    @GetMapping("/place/{contentid}")
+    public String detailInfo() {
+        return "상세정보";
+    }
 }

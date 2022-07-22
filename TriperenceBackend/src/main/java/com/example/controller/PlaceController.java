@@ -17,7 +17,7 @@ public class PlaceController {
     private PlaceService placeService;
 
     public Response<List<String>> getCategory(@RequestParam(name="category", required = false) String category){
-        
+
     }
 
     @GetMapping("/likes")

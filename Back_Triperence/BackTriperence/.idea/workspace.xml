@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed1c9b1-c804-469f-af21-b1bae7312227" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/PageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/PlaceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/SurveyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/TodoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/dto/ResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/dto/TestRequestBodyDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/PlaceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/SurveyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/TestRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/service/PlaceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/service/SurveyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/service/TestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/entity/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +33,8 @@
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -61,21 +53,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Github/Back_Triperence/BackTriperence",
+    "last_opened_file_path": "D:/Github/Back_Triperence/TriperenceBack",
     "spring.configuration.checksum": "1a0a32eb943e5db3688a1421eee7cddd"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BackTriperenceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BackTriperence.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.backtriperence.BackTriperenceApplication" />
@@ -93,7 +75,8 @@
       <option name="presentableId" value="Default" />
       <updated>1658465504760</updated>
       <workItem from="1658465507257" duration="228000" />
-      <workItem from="1658465752593" duration="758000" />
+      <workItem from="1658465752593" duration="1317000" />
+      <workItem from="1658485234644" duration="43000" />
     </task>
     <servers />
   </component>

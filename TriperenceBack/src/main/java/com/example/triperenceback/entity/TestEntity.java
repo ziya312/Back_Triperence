@@ -1,27 +1,50 @@
 package com.example.triperenceback.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+import lombok.*;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "test")
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class TestEntity {
-    @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name="system-uuid", strategy = "uuid")
+@Entity
+@Table(name = "Test")
+public class TestEntity implements Serializable {
 
-    private String id;
-    @Column(nullable = false)
-    private String name;
-    @Column(nullable = false)
-    private String password;
+    /**
+     *
+     */
+    private static final long serialVersionUID = -947585423656694361L;
+
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column
+    private String content;
+
+    @Column
+    private LocalDateTime createdDateTime;
+
+    @Column
+    private Boolean isComplete;
+
+    @Builder
+    public TestEntity(Long id, String content, LocalDateTime createdDateTime, Boolean isComplete) {
+        this.id = id;
+        this.content = content;
+        this.createdDateTime = createdDateTime;
+        this.isComplete = isComplete;
+    }
+
+    @Override
+    public String toString() {
+        return "TestEntity [id=" + id +
+                ", content=" + content +
+                ", createdDateTime=" + createdDateTime +
+                ", isComplete=" + isComplete + "]";
+    }
 }

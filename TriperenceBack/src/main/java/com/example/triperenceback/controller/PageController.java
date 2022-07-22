@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class PageController {
 
-    @GetMapping("")
-    public String home() {
-        return "Test";
-    }
-
     @GetMapping("*")
     public String header() {
         return null;

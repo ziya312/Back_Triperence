@@ -1,5 +1,9 @@
 package com.example.triperenceback.service;
 
-public class PlaceService {
+import com.example.triperenceback.dto.placeDTO.Place;
 
+import java.util.List;
+
+public interface PlaceService {
+    List<Place> getPlace();
 }

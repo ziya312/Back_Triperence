@@ -9,7 +9,7 @@
     <select id="getcontentid" parameterType="com.example.triperenceback.dto.placeDTO.Detail"
             resultType="com.example.triperenceback.dto.placeDTO.Detail">
         SELECT *
-        FROM tour_detailcommon_festival as dtc join tour_detailintro_festival as dic on dtc.contentid = dic.contentid
-        where dtc.contentid = #{contentid};
+        FROM tour_detailcommon as dc join tour_detailintro as di on dc.contentid = di.contentid
+        where dc.contentid = #{contentid};
     </select>
 </mapper>

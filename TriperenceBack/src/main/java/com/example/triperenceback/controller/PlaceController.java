@@ -40,7 +40,7 @@ public class PlaceController {
         return placeService.getcontenttypeid(dto);
     }
     //상세 페이지
-    @GetMapping("/detail/contentid={contentid}")
+    @GetMapping("/detail/{contentid}")
     public List<Detail> detailplace(@PathVariable(name="contentid") int contentid){
         System.out.println(contentid);
         Detail d_dto = new Detail();

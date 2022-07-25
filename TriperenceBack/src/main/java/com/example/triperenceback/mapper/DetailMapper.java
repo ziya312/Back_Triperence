@@ -8,4 +8,6 @@ import java.util.List;
 @Mapper
 public interface DetailMapper {
     List<Detail> getDetail();
+
+    List<Detail> getcontentid(Detail d_dto);
 }

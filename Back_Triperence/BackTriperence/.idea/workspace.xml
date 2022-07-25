@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed1c9b1-c804-469f-af21-b1bae7312227" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/EmployeeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +48,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Github/Back_Triperence/TriperenceBack",
+    "last_opened_file_path": "D:/Github/Back_Triperence/Back_Triperence/BackTriperence",
     "spring.configuration.checksum": "1a0a32eb943e5db3688a1421eee7cddd"
   }
 }]]></component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BackTriperence" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BackTriperence" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackTriperenceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="BackTriperence.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.backtriperence.BackTriperenceApplication" />
@@ -77,6 +85,7 @@
       <workItem from="1658465507257" duration="228000" />
       <workItem from="1658465752593" duration="1317000" />
       <workItem from="1658485234644" duration="43000" />
+      <workItem from="1658708142548" duration="372000" />
     </task>
     <servers />
   </component>

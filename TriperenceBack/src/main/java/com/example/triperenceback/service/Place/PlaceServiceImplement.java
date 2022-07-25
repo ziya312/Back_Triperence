@@ -1,4 +1,4 @@
-package com.example.triperenceback.service;
+package com.example.triperenceback.service.Place;
 
 import com.example.triperenceback.dto.placeDTO.Place;
 import com.example.triperenceback.mapper.PlaceMapper;
@@ -17,4 +17,9 @@ public class PlaceServiceImplement implements PlaceService {
     public List<Place> getPlace() {
         return placeMapper.getPlace();
     }
+
+    @Override
+    public List<Place> getcontenttypeid(Place dto){ return placeMapper.getcontenttypeid(dto);}
+
+
 }

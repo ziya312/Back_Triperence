@@ -4,4 +4,9 @@
     <select id="getPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
         SELECT * FROM tour_areabasedlist;
     </select>
+
+    <select id="getcontenttypeid" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        SELECT * FROM tour_areabasedlist where contenttypeid = #{contenttypeid};
+    </select>
+
 </mapper>

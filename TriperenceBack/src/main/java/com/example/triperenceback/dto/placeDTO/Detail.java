@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DetailPlace {
+public class Detail {
     //기본정보
     private int contentid;
+    private int contenttypeid;
     private String title;
     private String addr1; // 주소
     private float mapx;

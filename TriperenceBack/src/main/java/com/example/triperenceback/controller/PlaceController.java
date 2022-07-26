@@ -6,15 +6,13 @@ import com.example.triperenceback.dto.placeDTO.Place;
 import com.example.triperenceback.service.Place.DetailService;
 import com.example.triperenceback.service.Place.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/places")
+@CrossOrigin("*")
 public class PlaceController {
 
     @Autowired
@@ -50,10 +48,5 @@ public class PlaceController {
     @GetMapping("/likes")
     public String favorites() {
         return "즐겨찾기";
-    }
-
-    @GetMapping("/place/{contentid}")
-    public String detailInfo() {
-        return "상세정보";
     }
 }

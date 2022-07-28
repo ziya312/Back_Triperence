@@ -1,21 +1,32 @@
 package com.example.triperenceback.controller;
 
+import com.example.triperenceback.dto.Survey;
+import com.example.triperenceback.mapper.SurveyMapper;
 import com.example.triperenceback.service.SurveyService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/survey")
 public class SurveyController {
 
+    @Autowired
     private SurveyService surveyService;
 
-    @GetMapping("/save")
-    public String saveSurvey() {
-
-        return "취향 테스트 저장";
+    @GetMapping("/list")
+    public List<Survey> surveyList(){
+        System.out.println(surveyService.surveyList());
+        System.out.println("리스트 출력성공");
+        return surveyService.surveyList();
     }
+
+//    @PostMapping("/save")
+//    void insertSurvey(@RequestBody Survey survey) {
+//        surveyService.insertSurvey(survey);
+//        System.out.println("survey 저장 성공");
+//    }
 
     @GetMapping("/survey/result/{id}")
     public String resultSurvey() {

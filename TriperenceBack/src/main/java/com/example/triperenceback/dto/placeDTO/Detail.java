@@ -15,6 +15,7 @@ public class Detail {
     private String addr1; // 주소
     private float mapx;
     private float mapy;
+    private int areacode;
     private String overview;
     private String originimgurl;
 

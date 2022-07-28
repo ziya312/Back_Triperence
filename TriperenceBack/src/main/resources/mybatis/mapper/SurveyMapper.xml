@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.triperenceback.mapper.DetailMapper">
-    <select id="getDetail" resultType="com.example.triperenceback.dto.placeDTO.Detail">
-        SELECT *
-        FROM tour_detailcommon_culture;
+<mapper namespace="com.example.triperenceback.mapper.SurveyMapper">
+    <select id="getsurvey" resultType="com.example.triperenceback.dto.Survey">
+        SELECT * FROM user_survey;
     </select>
-
-    <select id="getcontentid" parameterType="com.example.triperenceback.dto.placeDTO.Detail"
-            resultType="com.example.triperenceback.dto.placeDTO.Detail">
-        SELECT *
-        FROM tour_detailcommon as dc join tour_detailintro as di on dc.contentid = di.contentid
-        where dc.contentid = #{contentid};
-    </select>
+    <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">
+        INSERT INTO user_survey(user_id, user_email, transportation, stay, destination, allergie, eat)
+        VALUES (#{user_id}, #{user_email},#{transportation}, #{stay}, #{destination}, #{allergie}, #{eat});
+    </insert>
 </mapper>

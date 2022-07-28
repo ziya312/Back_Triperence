@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Survey {
+    private Long user_id;
+    private String user_email;
     private String transportation;
     private String stay;
     private String destination;

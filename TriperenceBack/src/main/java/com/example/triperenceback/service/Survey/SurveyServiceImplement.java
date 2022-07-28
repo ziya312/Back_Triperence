@@ -1,4 +1,4 @@
-package com.example.triperenceback.service;
+package com.example.triperenceback.service.Survey;
 
 import com.example.triperenceback.dto.Survey;
 import com.example.triperenceback.mapper.SurveyMapper;

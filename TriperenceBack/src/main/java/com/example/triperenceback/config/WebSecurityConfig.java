@@ -1,54 +1,57 @@
 package com.example.triperenceback.config;
 
-//import com.example.security.JwtAuthenticationFilter;
-import com.example.triperenceback.service.UserService;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.web.filter.CorsFilter;
-
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import com.example.triperenceback.security.jwt.AuthEntryPointJwt;
+import com.example.triperenceback.security.jwt.AuthTokenFilter;
+import com.example.triperenceback.security.services.UserDetailsServiceImpl;
 
 @Configuration
-@AllArgsConstructor
 @EnableWebSecurity
-@Slf4j
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class WebSecurityConfig {
+    @Autowired
+    private AuthEntryPointJwt unauthorizedHandler;
+    @Autowired
+    UserDetailsServiceImpl userDetailsService;
 
-//    @Autowired
-//    private UserService userService;
-
-//    @Autowired
-//    private JwtAuthenticationFilter jwtAuthenticationFilter;
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-
-
-        // http 시큐리티 빌더
-        http.cors() // WebMvcConfig에서 이미 설정했으므로 기본 cors 설정
-                .and()
-                .csrf() // csrf는 현재 사용하지 않으므로 disable
-                .disable()
-                .httpBasic() // token을 사용하므로 basic 인증 disable
-                .disable()
-                .sessionManagement() // session 기반이 아님을 선언
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authorizeRequests() // /와 /auth/** 경로는 인증 안해도 됨
-                .antMatchers("/", "/auth/**", "/test/**", "/todo/**", "/prefer/**", "/places/**").permitAll()
-                .anyRequest() // /와 /auth/** 이외의 모든 경로는 인증 해야 됨
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.cors().and().csrf().disable().exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests()
+                .antMatchers("/api/auth/**").permitAll().antMatchers("/api/test/**").permitAll().anyRequest()
                 .authenticated();
-        //filter 등록
-        //매 요청마다
-        // CorsFilter 실행한 후에
-        // jwtAuthenticationFilter 실행한다.
-//        http.addFilterAfter(
-//                jwtAuthenticationFilter,
-//                CorsFilter.class);
+
+        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
     }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public AuthTokenFilter authenticationJwtTokenFilter() {
+        return new AuthTokenFilter();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
+            throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
+    }
+
 }

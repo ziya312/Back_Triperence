@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed1c9b1-c804-469f-af21-b1bae7312227" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/security/TokenProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/entity/TodoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/entity/TodoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/java/com/example/triperenceback/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TriperenceBack/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../TriperenceBack/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +56,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Github/Back_Triperence/Back_Triperence/BackTriperence",
-    "spring.configuration.checksum": "1a0a32eb943e5db3688a1421eee7cddd"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/Back_Triperence/TriperenceBack&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1a0a32eb943e5db3688a1421eee7cddd&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BackTriperence" />
@@ -86,6 +99,8 @@
       <workItem from="1658465752593" duration="1317000" />
       <workItem from="1658485234644" duration="43000" />
       <workItem from="1658708142548" duration="372000" />
+      <workItem from="1658708531321" duration="230000" />
+      <workItem from="1658802449976" duration="30000" />
     </task>
     <servers />
   </component>

@@ -19,30 +19,31 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id")
     private Long seq;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name = "user_email")
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "user_pw")
     private String password;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name = "user_nickname")
     private String nickname;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "user_givenname")
     private String givenname;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "user_familyname")
     private String familyname;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "user_age")
     private String age;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "user_nationality")
     private String nationality;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "user_gender")
     private String gender;
 
     public User(

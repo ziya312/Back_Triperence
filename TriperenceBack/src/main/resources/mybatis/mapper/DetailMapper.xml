@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.triperenceback.mapper.DetailMapper">
+    <select id="getDetail" resultType="com.example.triperenceback.dto.placeDTO.Detail">
+        SELECT *
+        FROM tour_detailcommon_culture;
+    </select>
+
+    <select id="getcontentid" parameterType="com.example.triperenceback.dto.placeDTO.Detail"
+            resultType="com.example.triperenceback.dto.placeDTO.Detail">
+        SELECT *
+        FROM tour_detailcommon as dc join tour_detailintro as di on dc.contentid = di.contentid
+        where dc.contentid = #{contentid};
+    </select>
+</mapper>

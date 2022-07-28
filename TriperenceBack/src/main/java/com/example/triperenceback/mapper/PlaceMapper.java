@@ -8,4 +8,5 @@ import java.util.List;
 @Mapper
 public interface PlaceMapper {
     List<Place> getPlace();
+    List<Place> getcontenttypeid(Place dto);
 }

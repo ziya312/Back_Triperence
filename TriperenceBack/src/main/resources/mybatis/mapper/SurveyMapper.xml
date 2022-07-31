@@ -4,17 +4,33 @@
     <select id="surveyList" resultType="com.example.triperenceback.dto.Survey">
         SELECT * FROM user_survey;
     </select>
-    <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">
-        INSERT INTO user_survey(transportation, stay, destination, allergie, eat, testtime)
-        VALUES (#{transportation}, #{stay}, #{destination}, #{allergie}, #{eat}, now());
-    </insert>
 
-<!--    <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">-->
-<!--        INSERT INTO user_survey(user_id, transportation, stay, destination, allergie, eat, category, kpop,-->
-<!--                                k_movie_dramashoot, subject, era, historyPlace, naturePlace,placeOne, placeTwo,-->
-<!--                                foodOne, foodTwo, testtime)-->
-<!--        VALUES (#{user_id}, #{transportation}, #{stay}, #{destination}, #{allergie}, #{eat}, #{category}, #{kpop},-->
-<!--                #{k_movie_drama}, #{subject}, #{era}, #{historyPlace}, #{naturePlace}, #{placeOne}, #{placeTwo},-->
-<!--                #{foodOne}, #{foodTwo}, now());-->
+<!--        <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">-->
+<!--            INSERT INTO user_survey(transportation, stay, destination, allergie, testtime)-->
+<!--            VALUES (#{transportation}, #{stay}, #{destination}, #{allergie}, now())-->
+<!--        </insert>-->
+    <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">
+        INSERT INTO user_survey(eat)
+        VALUES
+    <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">-->
+    <!--        INSERT INTO user_survey(transportation, stay, destination, allergie, eat, category, kpop,-->
+    <!--                                k_movie_drama, shoot, subject, era, historyPlace, naturePlace,placeOne, placeTwo,-->
+    <!--                                foodOne, foodTwo, testtime)-->
+    <!--        VALUES (#{transportation}, #{stay}, #{destination}, #{allergie}, #{eat}, #{category}, #{kpop},-->
+    <!--                #{k_movie_drama},#{shoot}, #{subject}, #{era}, #{historyPlace}, #{naturePlace}, #{placeOne}, #{placeTwo},-->
+    <!--                #{foodOne}, #{foodTwo}, now());-->
+    <!--    </insert>            <foreach collection="eat" item="item" index="index" separator="," open="(" close=")">
+                    #{item}
+                </foreach>
+        </insert>
+
+    <!--    <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">-->
+<!--        INSERT INTO user_survey(allergie)-->
+<!--        VALUES-->
+<!--            <foreach collection="array" item="item" separator=" , ">-->
+<!--                ("${item.allergie}")-->
+<!--            </foreach>-->
 <!--    </insert>-->
+
+<!---->
 </mapper>

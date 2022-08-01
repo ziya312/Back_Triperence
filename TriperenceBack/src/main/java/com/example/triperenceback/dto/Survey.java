@@ -21,11 +21,11 @@ public class Survey {
     private String transportation;
     private String stay;
     private String destination;
-//    private ArrayList<String> allergie;
-//    private ArrayList<String> eat;
+    private String allergie;
+    private String eat;
     private String category;
     /** k-culture **/
-//    private ArrayList<String> k_pop;
+    private String k_pop;
     private String k_movie_drama;
     /** photo **/
     private String shoot;

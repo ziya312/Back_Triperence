@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.triperenceback.mapper.PlaceMapper">
     <select id="getPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
-        SELECT * FROM tour_areabasedlist;
+        SELECT * FROM tour_areabasedlist limit 10;
     </select>
 
     <select id="getcontenttypeid" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">

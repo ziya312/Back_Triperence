@@ -25,8 +25,9 @@ public class SurveyController {
         return surveyService.surveyList();
     }
 
-    @PostMapping("/save")
+    @RequestMapping(value="/save", method=RequestMethod.POST)
     void insertSurvey(@RequestBody Survey survey) {
+
         surveyMapper.insertSurvey(survey);
         System.out.println("survey 저장 성공");
     }

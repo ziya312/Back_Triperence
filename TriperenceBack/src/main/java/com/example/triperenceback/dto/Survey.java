@@ -25,7 +25,7 @@ public class Survey {
     private String eat;
     private String category;
     /** k-culture **/
-    private String k_pop;
+    private String kpop;
     private String k_movie_drama;
     /** photo **/
     private String shoot;

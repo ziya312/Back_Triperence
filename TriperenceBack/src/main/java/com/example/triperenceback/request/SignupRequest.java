@@ -84,5 +84,18 @@ public class SignupRequest {
         this.gender = gender;
     }
 
+    @Override
+    public String toString() {
+        return "SignupRequest{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", givenname='" + givenname + '\'' +
+                ", familyname='" + familyname + '\'' +
+                ", age='" + age + '\'' +
+                ", nationality='" + nationality + '\'' +
+                ", gender='" + gender + '\'' +
+                '}';
+    }
 }
 

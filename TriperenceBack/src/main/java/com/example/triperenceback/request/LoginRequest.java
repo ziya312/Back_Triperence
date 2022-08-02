@@ -1,5 +1,7 @@
 package com.example.triperenceback.request;
 
+
+
 public class LoginRequest {
 
     private String email;
@@ -16,5 +18,13 @@ public class LoginRequest {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginRequest{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

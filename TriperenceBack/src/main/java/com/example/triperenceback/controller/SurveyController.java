@@ -32,9 +32,11 @@ public class SurveyController {
         System.out.println("survey 저장 성공");
     }
 
-    @GetMapping("/survey/result/{id}")
-    public String resultSurvey() {
-        return "취향 테스트 결과";
+    @GetMapping("/survey/result/")
+    public String resultSurvey(@RequestParam(value = "user_id") Integer user_id,
+                               @RequestParam(value = "common") String common,
+                               @RequestParam(value = "type") String type) {
+        return "survey result";
     }
 
     @GetMapping("/{id}")

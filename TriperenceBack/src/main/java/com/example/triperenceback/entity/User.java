@@ -135,7 +135,7 @@ public class User {
     }
 
     public void setGender(String gender) {
-        this.gender = this.gender;
+        this.gender = gender;
     }
 
     public User() {

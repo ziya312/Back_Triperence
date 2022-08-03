@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class Place {
     private int contentid;
     private int contenttypeid; // 76:landmark, 78:culture, 85:festival
+    private int areacode;
     private String title;
     private String addr1;
     private float mapx;

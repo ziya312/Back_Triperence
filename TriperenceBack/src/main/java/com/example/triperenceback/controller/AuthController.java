@@ -45,6 +45,7 @@ public class AuthController {
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateuser(@RequestBody LoginRequest loginRequest) {
 
+        System.out.println("로그인 "+loginRequest);
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
 
@@ -67,6 +68,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody SignupRequest signUpRequest) {
+        System.out.println("사인업"+signUpRequest);
         if (userRepository.existsByEmail(signUpRequest.getEmail())) {
             return ResponseEntity.badRequest().body(new MessageResponse("Error: Email is already in use!"));
         }

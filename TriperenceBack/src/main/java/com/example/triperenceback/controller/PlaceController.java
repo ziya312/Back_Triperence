@@ -20,8 +20,9 @@ public class PlaceController {
     @Autowired
     private DetailService detailService;
 
-    @GetMapping("")
+    @GetMapping("/category=all")
     public List<Place> place(){
+        System.out.println("전체 출력");
         return placeService.getPlace();
     }
 

@@ -108,83 +108,89 @@ public class AuthController {
     }
 
     // 비밀번호 수정
-    @PutMapping("/password/{email}")
-    public ResponseEntity<User> updatePassword(@PathVariable("email") String email, @RequestBody User user) {
-        Optional<User> userData = userRepository.findByEmail(email);
+    @PutMapping("update/{seq}")
+    public ResponseEntity<User> updatePassword(@PathVariable("seq") Long seq, @RequestBody User user) {
+        Optional<User> userData = userRepository.findBySeq(seq);
 
         if (userData.isPresent()) {
             User _user = userData.get();
             _user.setPassword(encoder.encode(user.getPassword()));
-            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-    // 이름 수정
-    @PutMapping("/givenname/{email}")
-    public ResponseEntity<User> updateGivenName(@PathVariable("email") String email, @RequestBody User user) {
-        Optional<User> userData = userRepository.findByEmail(email);
-
-        if (userData.isPresent()) {
-            User _user = userData.get();
-            _user.setGivenname(user.getGivenname());
-            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-    // 성 수정
-    @PutMapping("/familyname/{email}")
-    public ResponseEntity<User> updateFamilyName(@PathVariable("email") String email, @RequestBody User user) {
-        Optional<User> userData = userRepository.findByEmail(email);
-
-        if (userData.isPresent()) {
-            User _user = userData.get();
-            _user.setFamilyname(user.getFamilyname());
-            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-    //닉네임 수정
-    @PutMapping("/nickname/{email}")
-    public ResponseEntity<User> updateNickName(@PathVariable("email") String email, @RequestBody User user) {
-        Optional<User> userData = userRepository.findByEmail(email);
-
-        if (userData.isPresent()) {
-            User _user = userData.get();
             _user.setNickname(user.getNickname());
-            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-    //성별 수정
-    @PutMapping("/gender/{email}")
-    public ResponseEntity<User> updateGender(@PathVariable("email") String email, @RequestBody User user) {
-        Optional<User> userData = userRepository.findByEmail(email);
-
-        if (userData.isPresent()) {
-            User _user = userData.get();
+            _user.setGivenname(user.getGivenname());
+            _user.setFamilyname(user.getFamilyname());
             _user.setGender(user.getGender());
-            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-    //나이 수정
-    @PutMapping("/age/{email}")
-    public ResponseEntity<User> updateAge(@PathVariable("email") String email, @RequestBody User user) {
-        Optional<User> userData = userRepository.findByEmail(email);
-
-        if (userData.isPresent()) {
-            User _user = userData.get();
             _user.setAge(user.getAge());
+            _user.setNationality(user.getNationality());
             return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+//    // 이름 수정
+//    @PutMapping("/givenname/{email}")
+//    public ResponseEntity<User> updateGivenName(@PathVariable("email") String email, @RequestBody User user) {
+//        Optional<User> userData = userRepository.findByEmail(email);
+//
+//        if (userData.isPresent()) {
+//            User _user = userData.get();
+//            _user.setGivenname(user.getGivenname());
+//            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+//    // 성 수정
+//    @PutMapping("/familyname/{email}")
+//    public ResponseEntity<User> updateFamilyName(@PathVariable("email") String email, @RequestBody User user) {
+//        Optional<User> userData = userRepository.findByEmail(email);
+//
+//        if (userData.isPresent()) {
+//            User _user = userData.get();
+//            _user.setFamilyname(user.getFamilyname());
+//            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+//    //닉네임 수정
+//    @PutMapping("/nickname/{email}")
+//    public ResponseEntity<User> updateNickName(@PathVariable("email") String email, @RequestBody User user) {
+//        Optional<User> userData = userRepository.findByEmail(email);
+//
+//        if (userData.isPresent()) {
+//            User _user = userData.get();
+//            _user.setNickname(user.getNickname());
+//            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+//    //성별 수정
+//    @PutMapping("/gender/{email}")
+//    public ResponseEntity<User> updateGender(@PathVariable("email") String email, @RequestBody User user) {
+//        Optional<User> userData = userRepository.findByEmail(email);
+//
+//        if (userData.isPresent()) {
+//            User _user = userData.get();
+//            _user.setGender(user.getGender());
+//            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+//    //나이 수정
+//    @PutMapping("/age/{email}")
+//    public ResponseEntity<User> updateAge(@PathVariable("email") String email, @RequestBody User user) {
+//        Optional<User> userData = userRepository.findByEmail(email);
+//
+//        if (userData.isPresent()) {
+//            User _user = userData.get();
+//            _user.setAge(user.getAge());
+//            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
     // 회원 정보 삭제
     @DeleteMapping("/delete/{seq}")
     public void delete(@PathVariable("seq") Long seq) {

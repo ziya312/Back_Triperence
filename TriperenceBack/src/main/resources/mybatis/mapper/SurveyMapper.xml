@@ -13,6 +13,4 @@
                 #{k_movie_drama}, #{shoot}, #{subject}, #{era}, #{historyPlace}, #{naturePlace}, #{placeOne}, #{placeTwo},
                 #{foodOne}, #{foodTwo}, now());
     </insert>
-
-
 </mapper>

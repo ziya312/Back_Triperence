@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface DetailService {
 
-    List<Detail> getcontentid(Detail d_dto);
+    Detail getcontentid(Detail d_dto);
 
     List<Detail> getDetail();
+
+    List<String> getImageList(Detail dto);
 }

@@ -26,11 +26,6 @@ public class PlaceController {
         return placeService.getPlace();
     }
 
-    @GetMapping("/detail")
-    public List<Detail> detail(){
-        return detailService.getDetail();
-    }
-
     @GetMapping("/category={contenttypeid}")
     public List<Place> category(@PathVariable(name="contenttypeid") int contenttypeid){
         System.out.println(contenttypeid);
@@ -38,14 +33,23 @@ public class PlaceController {
         dto.setContenttypeid(contenttypeid);
         return placeService.getcontenttypeid(dto);
     }
+
+
+    @GetMapping("/detail")
+    public List<Detail> detail(){
+        return detailService.getDetail();
+    }
+
     //상세 페이지
     @GetMapping("/detail/{contentid}")
-    public List<Detail> detailplace(@PathVariable(name="contentid") int contentid){
+    public Detail detailplace(@PathVariable(name="contentid") int contentid){
         System.out.println(contentid);
         Detail d_dto = new Detail();
         d_dto.setContentid(contentid);
+        System.out.println("mingi"+detailService.getImageList(d_dto));
         return detailService.getcontentid(d_dto);
     }
+
     @GetMapping("/likes")
     public String favorites() {
         return "즐겨찾기";

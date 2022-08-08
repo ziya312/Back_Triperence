@@ -18,7 +18,14 @@ public class DetailServiceImplement implements DetailService {
     }
 
     @Override
-    public List<Detail> getcontentid(Detail d_dto){
-        return detailMapper.getcontentid(d_dto);
+    public List<String> getImageList(Detail dto) {
+        return detailMapper.getImageList(dto);
+    }
+
+    @Override
+    public Detail getcontentid(Detail d_dto){
+        Detail detail = detailMapper.getcontentid(d_dto);
+        detail.setOriginimgurl(detailMapper.getImageList(d_dto));
+        return detail;
     }
 }

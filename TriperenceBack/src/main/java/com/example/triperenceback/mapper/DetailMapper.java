@@ -9,5 +9,7 @@ import java.util.List;
 public interface DetailMapper {
     List<Detail> getDetail();
 
-    List<Detail> getcontentid(Detail d_dto);
+    Detail getcontentid(Detail d_dto);
+
+    List<String> getImageList(Detail dto);
 }

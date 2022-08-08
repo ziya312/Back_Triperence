@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,7 +20,7 @@ public class Detail {
     private float mapy;
     private int areacode;
     private String overview;
-    private String originimgurl;
+    private List<String> originimgurl;
 
     //Culture, Landmark, Food
     private String tel;

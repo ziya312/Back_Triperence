@@ -10,6 +10,6 @@
 
     <select id="getImageList" parameterType="com.example.triperenceback.dto.placeDTO.Detail"
             resultType="String">
-        SELECT originimgurl FROM tour_detailimage where contentid = #{contentid}
+        SELECT originimgurl FROM tour_detailimage where contentid = #{contentid} limit 4
     </select>
 </mapper>

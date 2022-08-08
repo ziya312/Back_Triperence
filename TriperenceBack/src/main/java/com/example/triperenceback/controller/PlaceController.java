@@ -1,8 +1,13 @@
 package com.example.triperenceback.controller;
 
 
+import com.example.triperenceback.dto.Like;
+import com.example.triperenceback.dto.Survey;
 import com.example.triperenceback.dto.placeDTO.Detail;
 import com.example.triperenceback.dto.placeDTO.Place;
+import com.example.triperenceback.mapper.LikeMapper;
+import com.example.triperenceback.mapper.SurveyMapper;
+import com.example.triperenceback.service.Like.LikeService;
 import com.example.triperenceback.service.Place.DetailService;
 import com.example.triperenceback.service.Place.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +24,12 @@ public class PlaceController {
     private PlaceService placeService;
     @Autowired
     private DetailService detailService;
+
+    @Autowired
+    private LikeService likeService;
+
+    @Autowired
+    private LikeMapper likeMapper;
 
     @GetMapping("/category=all")
     public List<Place> place(){
@@ -50,8 +61,10 @@ public class PlaceController {
         return detailService.getcontentid(d_dto);
     }
 
-    @GetMapping("/likes")
-    public String favorites() {
-        return "즐겨찾기";
+    @RequestMapping(value="/likes", method=RequestMethod.POST)
+    void insertSurvey(@RequestBody Like like) {
+
+        likeMapper.insertLike(like);
+        System.out.println("like save success");
     }
 }

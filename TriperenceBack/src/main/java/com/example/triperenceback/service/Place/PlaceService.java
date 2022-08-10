@@ -7,4 +7,5 @@ import java.util.List;
 public interface PlaceService {
     List<Place> getPlace();
     List<Place> getcontenttypeid(Place dto);
+    List<Place> getChoaPlace();
 }

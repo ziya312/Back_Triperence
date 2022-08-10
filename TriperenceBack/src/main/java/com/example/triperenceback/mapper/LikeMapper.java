@@ -9,5 +9,6 @@ import java.util.List;
 @Mapper
 public interface LikeMapper {
     void insertLike(Like like);
+    void deleteLike(Like like);
     Like likeList();
 }

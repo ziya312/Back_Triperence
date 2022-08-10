@@ -21,5 +21,10 @@ public class PlaceServiceImplement implements PlaceService {
     @Override
     public List<Place> getcontenttypeid(Place dto){ return placeMapper.getcontenttypeid(dto);}
 
+    @Override
+    public List<Place> getChoaPlace() {
+        return placeMapper.getChoaPlace();
+    }
+
 
 }

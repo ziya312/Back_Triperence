@@ -9,4 +9,6 @@ import java.util.List;
 public interface PlaceMapper {
     List<Place> getPlace();
     List<Place> getcontenttypeid(Place dto);
+
+    List<Place> getChoaPlace();
 }

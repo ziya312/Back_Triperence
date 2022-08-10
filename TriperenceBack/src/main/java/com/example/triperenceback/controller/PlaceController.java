@@ -61,10 +61,15 @@ public class PlaceController {
         return detailService.getcontentid(d_dto);
     }
 
-    @RequestMapping(value="/likes", method=RequestMethod.POST)
-    void insertSurvey(@RequestBody Like like) {
-
+    @RequestMapping(value="/likes", method=RequestMethod.POST )
+    void insertLike(@RequestBody Like like) {
         likeMapper.insertLike(like);
         System.out.println("like save success");
+    }
+
+    @RequestMapping(value="/likes/delete", method=RequestMethod.DELETE)
+    void deleteLike(@RequestBody Like like) {
+        likeMapper.deleteLike(like);
+        System.out.println("like delete success");
     }
 }

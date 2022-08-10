@@ -5,7 +5,9 @@
         INSERT INTO user_like(user_id, like_cno)
         VALUES (#{user_id}, #{like_cno});
     </insert>
-
+    <delete id="deleteLike">
+        DELETE FROM user_like WHERE like_cno = #{like_cno} and user_id = #{user_id};
+    </delete>
 <!--   <insert id="insertLike" parameterType="com.example.triperenceback.dto.Like">-->
 <!--       update user_like set user_id = #{user_id}, like_cno = #{like_cno} where user_id = #{user_id};-->
 <!--   </insert>-->

@@ -2,10 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.triperenceback.mapper.PlaceMapper">
     <select id="getPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
-        SELECT * FROM tour_areabasedlist limit 10;
+        SELECT * FROM tour_areabasedlist limit 20;
     </select>
 
     <select id="getcontenttypeid" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">
         SELECT * FROM tour_areabasedlist where contenttypeid = #{contenttypeid};
     </select>
+
+    <select id="getChoaPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        select * from tour_kculture as kc join tour_areabasedlist as abl on kc.contentid = abl.contentid where artist regexp 'BTS|BLACKPINK|Kim Taeri|Lee Jungjae';
+    </select>
+    <!--    <select id="getChoaKPOP" resultType="com.example.triperenceback.dto.placeDTO.Place">-->
+<!--        select * from tour_kculture as kc join tour_areabasedlist as abl on kc.contentid = abl.contentid where artist regexp 'BTS|BLACKPINK';-->
+<!--    </select>-->
+<!--    <select id="getChoaKVIDEO" resultType="com.example.triperenceback.dto.placeDTO.Place">-->
+<!--        select * from tour_kculture as kc join tour_areabasedlist as abl on kc.contentid = abl.contentid where contenttitle regexp 'Mr. Sunshine|Squid Game';-->
+<!--    </select>-->
 </mapper>

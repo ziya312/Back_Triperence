@@ -42,5 +42,4 @@ public class Survey {
     private String foodOne;
     private String foodTwo;
 
-
 }

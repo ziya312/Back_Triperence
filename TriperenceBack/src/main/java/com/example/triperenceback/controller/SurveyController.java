@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/survey")
+@CrossOrigin("*")
 public class SurveyController {
 
     @Autowired

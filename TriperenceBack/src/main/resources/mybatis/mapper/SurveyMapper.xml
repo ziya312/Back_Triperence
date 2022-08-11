@@ -6,10 +6,10 @@
     </select>
 
     <insert id="insertSurvey" parameterType="com.example.triperenceback.dto.Survey">
-        INSERT INTO user_survey(transportation, stay, destination, allergie, eat, category, kpop,
+        INSERT INTO user_survey(user_id, user_email ,transportation, stay, destination, allergie, eat, category, kpop,
                                 k_movie_drama,shoot, subject, era, historyPlace, naturePlace, placeOne, placeTwo,
                                 foodOne, foodTwo, testtime)
-        VALUES (#{transportation}, #{stay}, #{destination}, #{allergie}, #{eat}, #{category}, #{kpop},
+        VALUES (#{user_id}, #{user_email}, #{transportation}, #{stay}, #{destination}, #{allergie}, #{eat}, #{category}, #{kpop},
                 #{k_movie_drama}, #{shoot}, #{subject}, #{era}, #{historyPlace}, #{naturePlace}, #{placeOne}, #{placeTwo},
                 #{foodOne}, #{foodTwo}, now());
     </insert>

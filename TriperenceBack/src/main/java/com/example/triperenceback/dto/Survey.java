@@ -15,8 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 public class Survey {
-//    private Long user_id;
-//    private String user_email;
+    private Long user_id;
+    private String user_email;
     private Date testtime;
     private String transportation;
     private String stay;

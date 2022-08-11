@@ -9,9 +9,16 @@
         SELECT * FROM tour_areabasedlist where contenttypeid = #{contenttypeid};
     </select>
 
+
+<!--    <select id="getHanok" resultType="com.example.triperenceback.dto.placeDTO.Place">-->
+<!--        -->
+<!--    </select>-->
     <select id="getChoaPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
         select * from tour_kculture as kc join tour_areabasedlist as abl on kc.contentid = abl.contentid where artist regexp 'BTS|BLACKPINK|Kim Taeri|Lee Jungjae';
     </select>
+
+
+
     <!--    <select id="getChoaKPOP" resultType="com.example.triperenceback.dto.placeDTO.Place">-->
 <!--        select * from tour_kculture as kc join tour_areabasedlist as abl on kc.contentid = abl.contentid where artist regexp 'BTS|BLACKPINK';-->
 <!--    </select>-->

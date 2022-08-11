@@ -26,5 +26,10 @@ public class PlaceServiceImplement implements PlaceService {
         return placeMapper.getChoaPlace();
     }
 
+    @Override
+    public List<Place> getMyPlace(Long seq) {
+        return placeMapper.getMyPlace(seq);
+    }
+
 
 }

@@ -2,11 +2,12 @@ package com.example.triperenceback.controller;
 
 
 import com.example.triperenceback.dto.Like;
-import com.example.triperenceback.dto.Survey;
+import com.example.triperenceback.entity.User;
 import com.example.triperenceback.dto.placeDTO.Detail;
 import com.example.triperenceback.dto.placeDTO.Place;
 import com.example.triperenceback.mapper.LikeMapper;
 import com.example.triperenceback.mapper.SurveyMapper;
+import com.example.triperenceback.repository.UserRepository;
 import com.example.triperenceback.service.Like.LikeService;
 import com.example.triperenceback.service.Place.DetailService;
 import com.example.triperenceback.service.Place.PlaceService;
@@ -19,6 +20,9 @@ import java.util.List;
 @RequestMapping("/places")
 @CrossOrigin("*")
 public class PlaceController {
+
+    @Autowired
+    private UserRepository userRepository;
 
     @Autowired
     private PlaceService placeService;
@@ -72,4 +76,11 @@ public class PlaceController {
         likeMapper.deleteLike(like);
         System.out.println("like delete success");
     }
+
+    @RequestMapping(value="/likes/list/{seq}", method=RequestMethod.GET )
+    public List<Place> likeplaceList(@PathVariable(name="seq") Long seq){
+        System.out.println("========wishlist========");
+        return placeService.getMyPlace(seq);
+    }
+
 }

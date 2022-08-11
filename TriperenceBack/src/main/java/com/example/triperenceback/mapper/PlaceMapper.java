@@ -10,5 +10,6 @@ public interface PlaceMapper {
     List<Place> getPlace();
     List<Place> getcontenttypeid(Place dto);
 
+    List<Place> getMyPlace(Long seq);
     List<Place> getChoaPlace();
 }

@@ -198,5 +198,6 @@ public class AuthController {
         user.ifPresent(selectUser -> {
             userRepository.delete(selectUser);
         });
+        System.out.println(seq+"!!!DELETE USER!!!");
     }
 }

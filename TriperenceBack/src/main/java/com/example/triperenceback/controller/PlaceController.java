@@ -22,9 +22,6 @@ import java.util.List;
 public class PlaceController {
 
     @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
     private PlaceService placeService;
     @Autowired
     private DetailService detailService;

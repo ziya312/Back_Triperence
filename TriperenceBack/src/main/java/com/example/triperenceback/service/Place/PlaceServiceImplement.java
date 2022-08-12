@@ -27,6 +27,31 @@ public class PlaceServiceImplement implements PlaceService {
     }
 
     @Override
+    public List<Place> getMirPlace() {
+        return placeMapper.getMirPlace();
+    }
+
+    @Override
+    public List<Place> getHimchanPlace() {
+        return placeMapper.getHimchanPlace();
+    }
+
+    @Override
+    public List<Place> getPureumPlace() {
+        return placeMapper.getPureumPlace();
+    }
+
+    @Override
+    public List<Place> getSodamPlace() {
+        return placeMapper.getSodamPlace();
+    }
+
+    @Override
+    public List<Place> getNoriPlace() {
+        return placeMapper.getNoriPlace();
+    }
+
+    @Override
     public List<Place> getMyPlace(Long seq) {
         return placeMapper.getMyPlace(seq);
     }

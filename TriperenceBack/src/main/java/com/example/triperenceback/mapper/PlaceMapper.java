@@ -12,4 +12,16 @@ public interface PlaceMapper {
 
     List<Place> getMyPlace(Long seq);
     List<Place> getChoaPlace();
+
+    List<Place> getMirPlace();
+
+    List<Place> getHimchanPlace();
+
+    List<Place> getPureumPlace();
+
+
+    List<Place> getSodamPlace();
+
+    List<Place> getNoriPlace();
+
 }

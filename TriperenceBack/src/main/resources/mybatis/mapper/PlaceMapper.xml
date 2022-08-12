@@ -9,13 +9,33 @@
         SELECT * FROM tour_areabasedlist where contenttypeid = #{contenttypeid};
     </select>
 
+    <select id="getChoaPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        select * from tour_kculture as kc join tour_areabasedlist as abl on kc.contentid = abl.contentid where artist regexp 'BTS|BLACKPINK|Kim Taeri|Lee Jungjae';
+    </select>
+
+    <select id="getMirPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        select * from his_palacegates;
+    </select>
+
+    <select id="getHimchanPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        select * from pho_selfie;
+    </select>
+
+    <select id="getPureumPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        select * from nat_mountains;
+    </select>
+
+    <select id="getSodamPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        select * from food_tradtiontable;
+    </select>
+
+    <select id="getNoriPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        select * from enter_sightdynm;
+    </select>
 
 <!--    <select id="getHanok" resultType="com.example.triperenceback.dto.placeDTO.Place">-->
 <!--        -->
 <!--    </select>-->
-    <select id="getChoaPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">
-        select * from tour_kculture as kc join tour_areabasedlist as abl on kc.contentid = abl.contentid where artist regexp 'BTS|BLACKPINK|Kim Taeri|Lee Jungjae';
-    </select>
 
 
 

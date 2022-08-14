@@ -12,6 +12,7 @@ import com.example.triperenceback.service.Like.LikeService;
 import com.example.triperenceback.service.Place.DetailService;
 import com.example.triperenceback.service.Place.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -46,6 +47,13 @@ public class PlaceController {
         return placeService.getcontenttypeid(dto);
     }
 
+
+
+    @GetMapping("/filter")
+    public List<Place> filter(@RequestParam(name="accom", required = false, defaultValue = "") String accom,
+                              @RequestParam(name="restaur", required = false, defaultValue = "") String restaur){
+        return placeService.getFilterPlace(accom, restaur);
+    }
 
     @GetMapping("/detail")
     public List<Detail> detail(){

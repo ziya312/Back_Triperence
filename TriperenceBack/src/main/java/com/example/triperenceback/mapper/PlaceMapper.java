@@ -24,4 +24,5 @@ public interface PlaceMapper {
 
     List<Place> getNoriPlace();
 
+    List<Place> getFilterPlace(String accom, String restaur);
 }

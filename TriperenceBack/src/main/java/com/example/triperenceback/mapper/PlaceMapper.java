@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface PlaceMapper {
     List<Place> getPlace();
-    List<Place> getcontenttypeid(Place dto);
+    List<Place> getCategoryPlace(int contenttypeid, String accom, String restaur, String cat2);
 
     List<Place> getMyPlace(Long seq);
     List<Place> getChoaPlace();
@@ -24,5 +24,5 @@ public interface PlaceMapper {
 
     List<Place> getNoriPlace();
 
-    List<Place> getFilterPlace(String accom, String restaur);
+    List<Place> getFilterPlace(String accom, String restaur, String cat2);
 }

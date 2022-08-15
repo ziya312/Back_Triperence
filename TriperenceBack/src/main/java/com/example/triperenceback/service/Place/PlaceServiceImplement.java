@@ -19,7 +19,10 @@ public class PlaceServiceImplement implements PlaceService {
     }
 
     @Override
-    public List<Place> getcontenttypeid(Place dto){ return placeMapper.getcontenttypeid(dto);}
+    public List<Place> getCategoryPlace(int contenttypeid, String accom, String restaur, String cat2) {
+        return placeMapper.getCategoryPlace(contenttypeid, accom, restaur, cat2);
+    }
+
 
     @Override
     public List<Place> getChoaPlace() {
@@ -49,11 +52,6 @@ public class PlaceServiceImplement implements PlaceService {
     @Override
     public List<Place> getNoriPlace() {
         return placeMapper.getNoriPlace();
-    }
-
-    @Override
-    public List<Place> getFilterPlace(String accom, String restaur) {
-        return placeMapper.getFilterPlace(accom, restaur);
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface PlaceService {
     List<Place> getPlace();
-    List<Place> getcontenttypeid(Place dto);
+    List<Place> getCategoryPlace(int contenttypeid, String accom, String restaur, String cat2);
     List<Place> getMyPlace(Long seq);
     List<Place> getChoaPlace();
     List<Place> getMirPlace();
@@ -18,6 +18,4 @@ public interface PlaceService {
     List<Place> getSodamPlace();
 
     List<Place> getNoriPlace();
-
-    List<Place> getFilterPlace(String accom, String restaur);
 }

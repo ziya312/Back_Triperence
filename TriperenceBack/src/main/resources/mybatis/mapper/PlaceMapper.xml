@@ -5,12 +5,8 @@
         SELECT * FROM tour_areabasedlist limit 20;
     </select>
 
-    <select id="getcontenttypeid" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">
-        SELECT * FROM tour_areabasedlist where contenttypeid = #{contenttypeid};
-    </select>
-
-    <select id="getFilterPlace" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">
-        SELECT * FROM tour_areabasedlist where (cat3 = #{accom}) or (cat3 = #{restaur}) ;
+    <select id="getCategoryPlace" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">
+        SELECT * FROM tour_areabasedlist where (contenttypeid = #{contenttypeid}) or (cat3=#{accom}) or (cat3 = #{restaur}) or (cat2 = #{cat2}) limit 20;
     </select>
 
     <select id="getChoaPlace" resultType="com.example.triperenceback.dto.placeDTO.Place">

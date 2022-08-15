@@ -21,6 +21,7 @@ public class Detail {
     private int areacode;
     private String overview;
     private List<String> originimgurl;
+    private String cat2;
 
     //Culture, Landmark, Food
     private String tel;

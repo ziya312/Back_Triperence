@@ -55,6 +55,11 @@ public class PlaceServiceImplement implements PlaceService {
     }
 
     @Override
+    public List<Place> getFilterPlace(String accom, String restaur, String cat2) {
+        return placeMapper.getFilterPlace(accom, restaur, cat2);
+    }
+
+    @Override
     public List<Place> getMyPlace(Long seq) {
         return placeMapper.getMyPlace(seq);
     }

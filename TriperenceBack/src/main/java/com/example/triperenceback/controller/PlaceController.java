@@ -33,7 +33,7 @@ public class PlaceController {
     @Autowired
     private LikeMapper likeMapper;
 
-    @GetMapping("/category?all")
+    @GetMapping("/category=all")
     public List<Place> place(){
         System.out.println("전체 출력");
         return placeService.getPlace();
@@ -44,9 +44,18 @@ public class PlaceController {
                                 @RequestParam(name="accom", required = false, defaultValue = "") String accom,
                                 @RequestParam(name="restaur", required = false, defaultValue = "") String restaur,
                                 @RequestParam(name="cat2", required = false, defaultValue = "") String cat2){
-        System.out.println(contenttypeid);
-        return placeService.getCategoryPlace(contenttypeid, accom, restaur, cat2);
+            System.out.println(contenttypeid);
+        System.out.println(accom);
+            return placeService.getCategoryPlace(contenttypeid, accom, restaur, cat2);
     }
+
+//    @GetMapping("/filter")
+//    public List<Place> filter(@RequestParam(name="accom", required = false, defaultValue = "") String accom,
+//                              @RequestParam(name="restaur", required = false, defaultValue = "") String restaur,
+//                              @RequestParam(name="cat2", required = false, defaultValue = "") String cat2){
+//        System.out.println(accom);
+//        return placeService.getFilterPlace(accom, restaur, cat2);
+//    }
 
     @GetMapping("/detail")
     public List<Detail> detail(){

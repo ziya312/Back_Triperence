@@ -20,4 +20,6 @@ public interface PlaceService {
     List<Place> getNoriPlace();
 
     List<Place> getFilterPlace(String accom, String restaur, String cat2);
+
+
 }

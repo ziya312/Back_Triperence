@@ -6,7 +6,7 @@
     </select>
 
     <select id="getCategoryPlace" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">
-        SELECT * FROM tour_areabasedlist where (contenttypeid = #{contenttypeid}) and (cat3 regexp #{accom}|#{restaur} or cat2 = #{cat2}) limit 50;
+        SELECT * FROM tour_areabasedlist where (contenttypeid = #{contenttypeid}) and ((cat3=#{accom}) or (cat3 = #{restaur}) or (cat2 = #{cat2})) limit 30;
     </select>
 
     <select id="getFilterPlace" parameterType="com.example.triperenceback.dto.placeDTO.Place" resultType="com.example.triperenceback.dto.placeDTO.Place">

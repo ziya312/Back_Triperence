@@ -45,7 +45,9 @@ public class PlaceController {
                                 @RequestParam(name="restaur", required = false, defaultValue = "") String restaur,
                                 @RequestParam(name="cat2", required = false, defaultValue = "") String cat2){
             System.out.println(contenttypeid);
-        System.out.println(accom);
+            System.out.println(accom);
+            System.out.println(restaur);
+            System.out.println(cat2);
             return placeService.getCategoryPlace(contenttypeid, accom, restaur, cat2);
     }
 

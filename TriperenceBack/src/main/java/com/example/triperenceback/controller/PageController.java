@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class PageController {
 
-    @GetMapping("*")
-    public String header() {
-        return null;
-    }
+
 
     @GetMapping("/home")
     public String home() { return "homepage"; }
